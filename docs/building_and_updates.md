@@ -36,6 +36,8 @@ The hash is authoritative. Other revisions, modified executables and PS2 dumps a
 
 ## Updates
 
+The recommended method is **Guitar Hero 2 Updater.exe**, a separate graphical application with release selection, automatic download verification and build output. See [graphical updater](updating.md). The manual method remains available below.
+
 Close this project's game and launcher normally, then install a source ZIP from the maintainer:
 
 ```powershell
