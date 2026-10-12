@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "archives": [
+    {
+      "name": "llvm-mingw",
+      "directory": "llvm-mingw-20261006-ucrt-x86_64",
+      "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20261006/llvm-mingw-20261006-ucrt-x86_64.zip",
+      "sha256": "317492c456aa27ee607a5919f1d2d38dcdc1112516a24d0bf4b00d078f52d17a",
+      "probe": "bin/clang++.exe"
+    },
+    {
+      "name": "cmake",
+      "directory": "cmake-4.4.4-windows-x86_64",
+      "url": "https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-windows-x86_64.zip",
+      "sha256": "bace36e94b31c68ab6fa295f26dfa11219e0701cf7c94b0284a7d1cb13dac536",
+      "probe": "bin/cmake.exe"
+    }
+  ],
+  "repositories": [
+    {
+      "directory": "XenonRecomp",
+      "url": "https://github.com/hedge-dev/XenonRecomp.git",
+      "revision": "ddd128bcca99fe8bfbb99bea583c972351fa6ace",
+      "submodules": ["fmt", "libmspack", "simde", "tiny-AES-c", "tomlplusplus", "xxHash"]
+    },
+    {
+      "directory": "rexglue-sdk",
+      "url": "https://github.com/rexglue/rexglue-sdk.git",
+      "revision": "c94f5ebdcb3c9d1a460ca48e04f9758448f8d518",
+      "submodules": ["cli11", "libmspack", "FFmpeg", "tomlplusplus", "simde", "xxHash", "spdlog", "fmt", "utfcpp", "imgui", "sdl3", "o1heap", "inja"]
+    }
+  ],
+  "game": {
+    "title_id": "415607E7",
+    "media_id": "69550273",
+    "description": "Guitar Hero II Xbox 360 USA/Europe retail revision",
+    "xex_sha256": "4f91842399e5e69085c295bc736a82abf3e2235c8f2143c347d9043cd633e596",
+    "image_sha256": "7499566f4469a906647dcf19ec3fa2eb89f0a4026362b514266355365ca3c083"
+  }
+}
