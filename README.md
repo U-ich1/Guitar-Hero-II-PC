@@ -12,15 +12,13 @@ This project has **no connection to GH2 Deluxe**. It is not based on GH2 Deluxe 
 
 ## What you can do today
 
-- Play songs and Career mode, with progress saved in your Documents folder.
+- Play songs through Quick Play and the complete Career mode.
 - Use guitars and gamepads, choose your controller, and remap buttons by pressing them on the device. Both XInput and DirectInput controllers are supported.
 - Change resolution, anti-aliasing, filtering, window mode, VSync and the FPS limit.
-- Hide the audience through **No audience** in Graphics to reduce crowd rendering.
-- Adjust audio delay and use the game's video calibration.
+- Adjust audio delay and use the game's video calibration (Plans for video calibration to be done through the launcher).
 - Enable cheats and choose between five Hyperspeed levels.
 - Import, export and manage saves from the launcher.
 - Show your mode, song, difficulty and venue in Discord Rich Presence.
-- Start the game from the launcher and quit to desktop from the game's menu.
 
 ## Screenshots
 
