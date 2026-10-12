@@ -37,6 +37,19 @@ class WorkflowTests(unittest.TestCase):
         name='launcher/assets/gh2pc-original-logo.png';archive=self.archive('art.zip',{name:b'custom launcher artwork'})
         with patch.object(update_source,'ROOT',self.root):update_source.apply_archive(archive)
         self.assertEqual((self.root/name).read_bytes(),b'custom launcher artwork')
+    def test_removed_tracked_docs_retired_but_edits_and_dump_preserved(self):
+        (self.root/'docs').mkdir()
+        original=b'old guide'
+        (self.root/'docs/retired.md').write_bytes(original)
+        (self.root/'docs/edited.md').write_bytes(b'my edits')
+        previous={'schema':1,'files':{'docs/retired.md':hashlib.sha256(original).hexdigest(),'docs/edited.md':hashlib.sha256(original).hexdigest(),'private/default.xex':hashlib.sha256(b'preserve game dump').hexdigest()}}
+        (self.root/'SOURCE-MANIFEST.json').write_text(json.dumps(previous))
+        archive=self.archive('retire.zip',{'runtime/test.cpp':b'new source'})
+        with patch.object(update_source,'ROOT',self.root):update_source.apply_archive(archive)
+        self.assertFalse((self.root/'docs/retired.md').exists())
+        self.assertEqual((self.root/'docs/edited.md').read_bytes(),b'my edits')
+        self.assertEqual((self.root/'private/default.xex').read_bytes(),b'preserve game dump')
+        self.assertEqual(next((self.root/'build/source-update-backups').rglob('retired.md')).read_bytes(),original)
     def test_traversal_and_game_asset_paths_rejected(self):
         for key in ('../escape.cpp','private/default.xex','tools/compiler.exe','runtime/../../private/default.xex','C:/escape.cpp'):
             archive=self.archive('unsafe.zip',{key:b'payload'})
