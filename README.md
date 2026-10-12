@@ -24,7 +24,7 @@ This project has **no connection to GH2 Deluxe**. It is not based on GH2 Deluxe 
 
 ## Screenshots
 
-Saved captures from the project's earlier working build.
+Gameplay captures.
 
 ![Surrender gameplay with the band, stage and note highway](https://raw.githubusercontent.com/U-ich1/Guitar-Hero-II-PC/main/docs/images/surrender-gameplay.png)
 
@@ -111,7 +111,7 @@ Replace the example filename with the ZIP you downloaded. This updates and rebui
 
 ## Current status
 
-Songs, Career saves, controller switching and reconnection, Discord presence and the audience toggle have been tested during development. Performance is still being improved and can vary between PCs. Experimental upscaling options have been removed.
+Songs and Career mode are playable, with persistent saves, controller switching and reconnection, Discord presence and audience visibility settings. Performance is still being improved and can vary between PCs. Experimental upscaling options have been removed.
 
 If something goes wrong, [open an issue](https://github.com/U-ich1/Guitar-Hero-II-PC/issues) with what happened, your PC and controller details, and any relevant logs. Never attach your ISO or game files.
 
@@ -121,4 +121,4 @@ Built with [XenonRecomp](https://github.com/hedge-dev/XenonRecomp) and [ReXGlue]
 
 Original project code is available under the [MIT license](LICENSE). Dependencies keep their own licenses. Guitar Hero II and its game content belong to their respective rights holders. This is an unofficial community project and is not affiliated with or endorsed by them. Gameplay screenshots are shown to illustrate the project.
 
-For development details, see the [build guide](docs/building_and_updates.md) and [earlier development notes](docs/development_history.md).
+For additional setup help, see the [build guide](docs/building_and_updates.md).
