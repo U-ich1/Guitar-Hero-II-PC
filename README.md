@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="launcher/assets/gh2pc-original-logo.png" alt="GH2 PC project logo" width="480">
+  <img src="https://raw.githubusercontent.com/U-ich1/Guitar-Hero-II-PC/main/docs/images/project-logo.svg" alt="GH2 PC project logo" width="480">
 </p>
 
 # Guitar Hero II PC

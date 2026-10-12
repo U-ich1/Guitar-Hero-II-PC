@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "source_id": "d5928420be242dfce1b26b66cf884054c48053d8bade119266694c364e5778be",
+  "source_id": "e3e6125494bac30828a39f38655b22b00c344d6ed748882d1943681debcf8fdd",
   "files": {
     ".gitignore": "57ecf426dd1f19f34d51ce2dc262ecfb9d3b42721a0b68577ed63839ed502c41",
     "Build.ps1": "9747dab0a00df90a6ffc7c63b961f06cc4f3f315b3ee7a61b1420df73120c6f5",
@@ -40,7 +40,7 @@
     "patches/gh2_present_settings.inl": "0442ebb91afbca947d0a152cad05e1da54b1eed55b0d8eec9999224ee5e8fc75",
     "patches/rexglue-headers/DXProgrammableCapture.h": "e6176d3cd12544226a4466fa730f626873dfdd0bb5075f50a1d3a5bc8d6f3501",
     "patches/rexglue-headers/README.md": "6e801395ffee29636ffbf4da89ef2f85b89d0f17734e0fe0e26e1978348952b0",
-    "README.md": "fcff7d653a5d58ce5965a06e4f9e9362e4fecd997aab47dcb5a01211ab7befd2",
+    "README.md": "f04346a15f60f48cf05ed31936f4bacd45762818958bdcec278cfe2cc1daa91d",
     "requirements-build.txt": "fee4c4a4373c159ca7cc40df08abed3def56c84e8d33b15ca8505b0773ebc6c9",
     "runtime/audio_calibration_dialog.h": "d3283f957069af18fc30162b8b515f76ac45d633ecf219c20264108e674dc2d9",
     "runtime/audio_delay.h": "6b9581b524308ae97038b34d12bfc4e7fc7396942e75e922d4a31a564d014f0f",
