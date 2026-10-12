@@ -514,7 +514,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR command,int){
         state.widget(-1,L"BUTTON",L"Back",BS_PUSHBUTTON|WS_TABSTOP,460,750,100,34,112);
         state.widget(-1,L"BUTTON",L"SETTINGS",BS_PUSHBUTTON|WS_TABSTOP,0,0,220,40,111);
         state.widget(-1,L"BUTTON",L"EXIT",BS_PUSHBUTTON|WS_TABSTOP,0,0,220,40,110);
-        state.widget(-1,L"STATIC",L"Version 0.2.0 (preview)",SS_LEFT,0,0,320,24,113);
+        state.widget(-1,L"STATIC",L"Version 0.1.0",SS_LEFT,0,0,320,24,113);
         state.widget(-1,L"BUTTON",L"Open logs",BS_PUSHBUTTON|WS_TABSTOP,450,750,120,34,105);
         state.play_button=state.widget(-1,L"BUTTON",L"Play Guitar Hero II",BS_DEFPUSHBUTTON|WS_TABSTOP,740,750,230,34,106);
         state.populate();state.ready=true;state.layout();state.show_page();state.refresh_state();SetTimer(window,1,1000,nullptr);
