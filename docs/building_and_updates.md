@@ -4,7 +4,7 @@ Source releases contain the project code, patches and build configuration. Each 
 
 ## First build
 
-Requirements: Windows 10/11 x64, an AVX-capable CPU, compatible Direct3D 12 GPU, Git for Windows, Python 3.11+, internet access for initial setup, and storage for tools, the dump and build outputs. The verified build uses Python 3.12.
+Requirements: Windows 10/11 x64, an AVX-capable CPU, compatible Direct3D 12 GPU, Git for Windows, Python 3.11+, internet access for initial setup, and storage for tools, the dump and build outputs. Python 3.12 is supported.
 
 Extract the source ZIP into a folder, open PowerShell there, then run:
 
@@ -74,9 +74,3 @@ python scripts/package_source.py
 The ZIP and SHA256 sidecar go to `build/releases`. An explicit allowlist includes project sources, patch files, configuration, scripts, tests and Markdown documentation. It excludes ISO files, extracted assets, generated translations, extracted artwork/icon, binaries, downloaded tools, build products, validation logs, saves and settings. Do not share the whole working project directory. Upstream notices in patches and downloaded dependencies should be retained.
 
 `SOURCE-MANIFEST.json` records each source file's checksum. This detects corruption/unexpected content; it is not a publisher signature. Obtain updates through a trusted source.
-
-## Verification
-
-The pristine-source audit exports pinned dependency sources and required submodules from local Git objects, applies patches twice and compares the result with the working sources. It found no uncaptured changes. The isolated full build used fresh translation and CMake output with verified local dependency/tool caches and read-only game assets. This verifies clean-source reproduction on the current Windows machine; another-machine hardware compatibility remains to be checked.
-
-`tests/build_workflow.py` covers source-only allowlists, update backup/preservation, tampered manifests, path traversal, cached-tool checksum rejection and unsupported executable rejection, using workspace fixtures. These checks do not modify Documents data. Audit results are recorded under `docs/*validation.json` and `docs/reproducibility_audit.json`, but those reports are excluded from source releases.
