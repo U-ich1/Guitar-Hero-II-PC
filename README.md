@@ -20,7 +20,7 @@ For a source ZIP update, close this project's game and launcher normally, then r
 
 The existing dump is reused; source files are backed up, and Documents saves/settings are not replaced. `Build.ps1 -Check` performs preflight and `-Offline` reuses installed caches. Source releases exclude the dump, assets, generated game code, binaries, extracted icon, downloaded tools and personal state.
 
-See **[building and updates](docs/building_and_updates.md)** for prerequisites, supported dump hash, Python alternatives, update behavior, build receipts and source-only packaging. No hosted project repository or automatic update server has been published yet.
+See **[building and updates](docs/building_and_updates.md)** for prerequisites, supported dump hash, Python alternatives, update behavior, build receipts and source-only packaging. Source and numbered releases are available at [U-ich1/Guitar-Hero-II-PC](https://github.com/U-ich1/Guitar-Hero-II-PC). Download a release source ZIP or pull the repository and rerun `Build.ps1` to update; there is no automatic update service.
 
 ## Existing project notes
 
