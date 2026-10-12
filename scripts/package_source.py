@@ -11,7 +11,7 @@ def package():
         archive.writestr('SOURCE-MANIFEST.json',json.dumps(manifest,indent=2))
     (output.with_suffix('.zip.sha256')).write_text(sha256(output)+'  '+output.name+'\n')
     print(output)
-    print(f'{len(files)} source files. No ISO, extracted game assets, generated translations, launcher icon, binaries, saves, build outputs or downloaded tools included.')
+    print(f'{len(files)} source files, including original launcher artwork. No ISO, extracted game assets/icons, generated translations, binaries, saves, build outputs or downloaded tools included.')
     return output
 
 if __name__=='__main__':package()

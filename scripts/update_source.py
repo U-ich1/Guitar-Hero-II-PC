@@ -1,7 +1,7 @@
 """Apply a verified source archive with backups; never touch dumps or saves."""
 from pathlib import Path,PurePosixPath
 import argparse,hashlib,json,os,time,zipfile
-from build_project import ROOT,SOURCE_DIRS,SOURCE_FILES
+from build_project import ROOT,SOURCE_DIRS,SOURCE_FILES,SOURCE_ARTWORK
 
 def apply_archive(archive):
     backup=ROOT/'build/source-update-backups'/time.strftime('%Y%m%d-%H%M%S')
@@ -14,7 +14,7 @@ def apply_archive(archive):
         for name,checksum in manifest['files'].items():
             relative=PurePosixPath(name)
             if relative.is_absolute() or '..' in relative.parts or '\\' in name or ':' in name:raise RuntimeError('Unsafe source path: '+name)
-            allowed=name in SOURCE_FILES or name=='launcher/assets/gh2-pc-logo.png' or (relative.parts[0] in SOURCE_DIRS and relative.suffix.lower() in ('.py','.ps1','.cpp','.h','.inl','.toml','.md','.rc')) or (relative.parts[0]=='docs' and relative.suffix=='.md')
+            allowed=name in SOURCE_FILES or name in SOURCE_ARTWORK or (relative.parts[0] in SOURCE_DIRS and relative.suffix.lower() in ('.py','.ps1','.cpp','.h','.inl','.toml','.md','.rc')) or (relative.parts[0]=='docs' and relative.suffix=='.md')
             target=ROOT.joinpath(*relative.parts)
             if not allowed or not target.resolve().is_relative_to(ROOT.resolve()):raise RuntimeError('Archive targets a non-source file: '+name)
             data=package.read(name)

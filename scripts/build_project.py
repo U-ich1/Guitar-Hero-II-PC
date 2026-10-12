@@ -5,6 +5,7 @@ import argparse,hashlib,json,os,platform,shutil,subprocess,sys,time,urllib.reque
 ROOT=Path(__file__).resolve().parents[1]
 LOCK=json.loads((ROOT/'dependencies.lock.json').read_text())
 SOURCE_DIRS=('runtime','launcher','patches','scripts','tests','config')
+SOURCE_ARTWORK=('launcher/assets/gh2pc-original-logo.png','launcher/assets/gh2pc-original-icon.png','launcher/assets/gh2pc-original.ico')
 SOURCE_FILES=('Build.ps1','Update.ps1','CMakeLists.txt','README.md','Start-GH2.cmd','Start-GH2.ps1','dependencies.lock.json','requirements-build.txt','.gitignore')
 
 def sha256(file):
@@ -22,8 +23,7 @@ def git_output(git,*args):
 
 def source_files():
     paths=[ROOT/name for name in SOURCE_FILES if (ROOT/name).is_file()]
-    artwork=ROOT/'launcher/assets/gh2-pc-logo.png'
-    if artwork.is_file():paths.append(artwork) # custom artwork, not extracted game bytes
+    paths.extend(ROOT/name for name in SOURCE_ARTWORK if (ROOT/name).is_file())
     for directory in SOURCE_DIRS:
         for path in (ROOT/directory).rglob('*'):
             if path.is_file() and path.suffix.lower() in ('.py','.ps1','.cpp','.h','.inl','.toml','.md','.rc') and '__pycache__' not in path.parts:
@@ -33,7 +33,7 @@ def source_files():
 
 def source_id():
     digest=hashlib.sha256()
-    for file in source_files():digest.update(file.relative_to(ROOT).as_posix().encode());digest.update(file.read_bytes() if file.suffix=='.png' else file.read_bytes().replace(b'\r\n',b'\n'))
+    for file in source_files():digest.update(file.relative_to(ROOT).as_posix().encode());digest.update(file.read_bytes() if file.suffix in ('.png','.ico') else file.read_bytes().replace(b'\r\n',b'\n'))
     return digest.hexdigest()
 
 def safe_extract(archive,destination,materialize_links=False):
