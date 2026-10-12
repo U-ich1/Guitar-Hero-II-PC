@@ -1,5 +1,5 @@
-101 ICON "assets/gh2.ico"
-103 RCDATA "assets/gh2-pc-logo.png"
+101 ICON "assets/gh2pc-original.ico"
+103 RCDATA "assets/gh2pc-original-logo.png"
 1 VERSIONINFO
 FILEVERSION 0,2,0,0
 PRODUCTVERSION 0,2,0,0
