@@ -34,7 +34,7 @@ class WorkflowTests(unittest.TestCase):
             with self.assertRaises(RuntimeError):update_source.apply_archive(archive)
         self.assertEqual((self.root/'runtime/test.cpp').read_bytes(),b'old source')
     def test_custom_launcher_artwork_updates(self):
-        name='launcher/assets/gh2-pc-logo.png';archive=self.archive('art.zip',{name:b'custom launcher artwork'})
+        name='launcher/assets/gh2pc-original-logo.png';archive=self.archive('art.zip',{name:b'custom launcher artwork'})
         with patch.object(update_source,'ROOT',self.root):update_source.apply_archive(archive)
         self.assertEqual((self.root/name).read_bytes(),b'custom launcher artwork')
     def test_traversal_and_game_asset_paths_rejected(self):
@@ -60,6 +60,6 @@ class WorkflowTests(unittest.TestCase):
         paths=[file.relative_to(ROOT).as_posix() for file in build_project.source_files()]
         self.assertTrue(paths)
         self.assertFalse(any(path.startswith(('private/','tools/','generated/','build/')) for path in paths))
-        self.assertFalse(any(path.lower().endswith(('.iso','.exe','.dll','.ico','.png')) and path!='launcher/assets/gh2-pc-logo.png' for path in paths))
+        self.assertFalse(any(path.lower().endswith(('.iso','.exe','.dll','.ico','.png')) and path not in build_project.SOURCE_ARTWORK for path in paths))
 
 if __name__=='__main__':unittest.main()
