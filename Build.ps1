@@ -10,7 +10,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $projectRoot = $PSScriptRoot
 if (!$Check) {
-    foreach ($name in @('gh2_pc', 'Guitar Hero 2 Launcher', 'GH2 Launcher')) {
+    foreach ($name in @('gh2_pc', 'Guitar Hero 2', 'Guitar Hero 2 Launcher', 'GH2 Launcher')) {
         foreach ($process in @(Get-Process -Name $name -ErrorAction SilentlyContinue)) {
             if ($process.Path -and $process.Path.StartsWith($projectRoot + '\', [StringComparison]::OrdinalIgnoreCase)) {
                 throw 'Close the game and launcher normally before building this project. No process was stopped.'

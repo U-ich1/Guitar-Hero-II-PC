@@ -12,13 +12,15 @@ This project has **no connection to GH2 Deluxe**. It is not based on GH2 Deluxe 
 
 ## What you can do today
 
-- Play songs through Quick Play and the complete Career mode.
+- Play songs and Career mode, with progress saved in your Documents folder.
 - Use guitars and gamepads, choose your controller, and remap buttons by pressing them on the device. Both XInput and DirectInput controllers are supported.
 - Change resolution, anti-aliasing, filtering, window mode, VSync and the FPS limit.
-- Adjust audio delay and use the game's video calibration (Plans for video calibration to be done through the launcher).
+- Hide the audience through **No audience** in Graphics to reduce crowd rendering.
+- Adjust audio delay and use the game's video calibration.
 - Enable cheats and choose between five Hyperspeed levels.
 - Import, export and manage saves from the launcher.
 - Show your mode, song, difficulty and venue in Discord Rich Presence.
+- Start the game from the launcher and quit to desktop from the game's menu.
 
 ## Screenshots
 
@@ -43,7 +45,7 @@ The downloads here contain the project tools and source, **not the game**. Every
 
 ### 2. Download the project
 
-Open the [latest release](https://github.com/U-ich1/Guitar-Hero-II-PC/releases/latest) and download the file named **gh2pc-source-VERSION.zip**. For 0.1.0, that is `gh2pc-source-0.1.0.zip`.
+Open the [latest release](https://github.com/U-ich1/Guitar-Hero-II-PC/releases/latest) and download the file named **gh2pc-source-VERSION.zip**. For 0.1.1, that is `gh2pc-source-0.1.1.zip`.
 
 Extract the ZIP into a folder such as `C:\Games\GH2PC`. Open that folder and check that `Build.ps1` is there. The launcher download on its own is for an existing built copy; it does not install the game.
 
@@ -90,13 +92,11 @@ Keep the launcher beside the project's `tools`, `private` and `build` folders. Y
 
 ## Update an existing copy
 
-Close the game and launcher normally. Download the newer **gh2pc-source-VERSION.zip**, then open a terminal in your existing project folder and run:
+Open **Guitar Hero 2 Updater.exe** in your project folder. The latest release is selected by default; you can choose another version and read its release notes.
 
-```powershell
-.\Update.ps1 -SourceArchive "D:\Downloads\gh2pc-source-NEW-VERSION.zip"
-```
+Close the game and launcher normally, then click **Install selected version**. The updater downloads the source package, checks it and rebuilds using your existing dump. No manual ZIP extraction is needed. Keep the updater open until it finishes. Your Documents saves and settings are kept.
 
-Replace the example filename with the ZIP you downloaded. This updates and rebuilds your copy using the dump you already imported. Your Documents saves and settings are kept.
+If your older build has no updater, download the standalone updater from a release and put it beside the launcher, `Build.ps1` and `Update.ps1`. See the [updater guide](docs/updating.md) for details and the [build guide](docs/building_and_updates.md) for manual update commands.
 
 ## Future plans
 
