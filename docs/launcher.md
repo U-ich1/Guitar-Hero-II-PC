@@ -25,7 +25,7 @@ Before launch, the executable installs any prepared game/runtime updates while G
 
 Run `scripts/build_launcher.ps1` to rebuild. Native Win32/common controls provide tabs, keyboard navigation and scrolling; DPI awareness and monitor bounds keep the window usable on scaled displays. The C++ runtime is linked statically, so the launcher imports only Windows system libraries.
 
-The launcher embeds GH2's original Xbox 360 title icon in its executable and window/taskbar icons. `scripts/extract_launcher_icon.py` reads XDBF image `0x8000` from the local decoded game image and wraps its original 64×64 PNG bytes in an ICO without altering the artwork. Run it before the first launcher build. The derived game artwork is excluded from source control.
+The launcher embeds original GH2 PC wordmark artwork and a matching pick-shaped icon. Both are included in source releases and require no game artwork extraction. See launcher_logo.md for provenance.
 
 `Guitar Hero 2 Launcher.exe --self-test` exercises config merge, unknown-setting preservation, Windows-path round trips, resolution-axis synchronization and protection against malformed config, using workspace fixtures. `--ui-test` constructs the five native tabs and validates all 69 editable fields, hover-help registration, Controls navigation and tab scroll reset without displaying the launcher or touching Documents. Reports are `docs/launcher_validation.json` and `docs/launcher_ui_validation.json`. `tests/launcher_capture.cpp` checks all supported logical input sources, held/released input behavior, guitar idle triggers, raw button 128, POV and analog trigger conversion. Physical DirectInput capture still needs a hands-on controller check.
 

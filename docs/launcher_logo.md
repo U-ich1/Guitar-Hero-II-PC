@@ -1,7 +1,23 @@
-# Launcher logo
+# Original launcher artwork
 
-The launcher uses [gh2-pc-logo.png](../launcher/assets/gh2-pc-logo.png), a high-resolution custom redraw produced with the built-in image editing tool. The PC lettering is part of the image, with its P adapted from the logo's R and its C adapted from the O. The transparent artwork is embedded in the executable; Windows Imaging Component scales it with Fant interpolation and supplies premultiplied alpha for drawing. The launcher no longer draws a separate PC caption or an extra black silhouette behind the logo.
+The launcher embeds `launcher/assets/gh2pc-original-logo.png` and
+`launcher/assets/gh2pc-original.ico`. The full-size icon source is
+`launcher/assets/gh2pc-original-icon.png`. All three are included in the source
+release. The previous official-logo-derived wordmark and extracted icon are
+excluded and no longer referenced by the launcher.
 
-Edit prompt: preserve the original Guitar Hero II letter silhouettes and arrangement; redraw cleanly at high resolution with white faces, silver-gray bevels and thin black outlines. Add PC below, centered, in the identical custom Gothic lettering. Construct P by adapting R without its diagonal leg and C by opening O's right side. Preserve sharp serifs and genuine transparency; omit glow, standard-font captions and extra text.
+Created with the built-in imagegen tool without game artwork as input. The icon
+used the newly created wordmark as its only reference. Original design does not
+establish legal clearance for project naming or trademarks. This is an
+unofficial community project.
 
-The source package includes this custom launcher artwork. The title icon and other assets extracted directly from the game remain excluded and are obtained from each builder's own dump.
+Logo prompt: original horizontal GH2 PC wordmark, bold charcoal geometric
+sans-serif lettering beside a burgundy pick with three ivory strings and an
+amber note, transparent background. Avoid official logos, Gothic lettering,
+metallic bevels and borrowed franchise artwork.
+
+Icon prompt: use only the newly created original pick emblem, centered on a
+transparent square, bold shapes legible at small sizes, no text.
+
+The Windows ICO contains 16, 24, 32, 48, 64, 128 and 256px images. The game
+executable's locally extracted icon is separate and excluded from source releases.
