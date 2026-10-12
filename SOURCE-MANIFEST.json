@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "source_id": "1cc5c5d7a13dca1ad06c779178c009a48d5303c1bb88ce539a474cf8216b5956",
+  "source_id": "d5928420be242dfce1b26b66cf884054c48053d8bade119266694c364e5778be",
   "files": {
     ".gitignore": "57ecf426dd1f19f34d51ce2dc262ecfb9d3b42721a0b68577ed63839ed502c41",
     "Build.ps1": "9747dab0a00df90a6ffc7c63b961f06cc4f3f315b3ee7a61b1420df73120c6f5",
@@ -13,6 +13,7 @@
     "docs/building_and_updates.md": "d084b08ae3c1b6c95ffa217565c3465862264aef216ef7918680f4cdd111b675",
     "docs/cheats.md": "b61816723988a9dffa5df0e9b8d0e61844375bb6271b2dde5b748ca400e51f83",
     "docs/controls.md": "83acea7236543a4432e46338f2e149351050afb0e204ef774bb3777efb878f21",
+    "docs/development_history.md": "91d2a9807736fd52c47eef7cba1aa2e145c6fcf26c8af245a0f7470c9b7710ef",
     "docs/discord_presence.md": "d73ca9562c2fe04675b44045f763ac0be4c761919adc1cf0db3b0408bfc77cf5",
     "docs/dlss_development.md": "a8bef4faa1adbb6fe06f3c97a95546f0021925958f72c32def1e1fbc6b8310f2",
     "docs/graphics_next.md": "5b95a4b7833cf9e142a3c1608eb713bfafbe5c068302ea84afaca6953b292a5d",
@@ -39,7 +40,7 @@
     "patches/gh2_present_settings.inl": "0442ebb91afbca947d0a152cad05e1da54b1eed55b0d8eec9999224ee5e8fc75",
     "patches/rexglue-headers/DXProgrammableCapture.h": "e6176d3cd12544226a4466fa730f626873dfdd0bb5075f50a1d3a5bc8d6f3501",
     "patches/rexglue-headers/README.md": "6e801395ffee29636ffbf4da89ef2f85b89d0f17734e0fe0e26e1978348952b0",
-    "README.md": "0538e20d321652020cb47b1d2a7e482300151de2ed7102a6656c0afc00062eae",
+    "README.md": "fcff7d653a5d58ce5965a06e4f9e9362e4fecd997aab47dcb5a01211ab7befd2",
     "requirements-build.txt": "fee4c4a4373c159ca7cc40df08abed3def56c84e8d33b15ca8505b0773ebc6c9",
     "runtime/audio_calibration_dialog.h": "d3283f957069af18fc30162b8b515f76ac45d633ecf219c20264108e674dc2d9",
     "runtime/audio_delay.h": "6b9581b524308ae97038b34d12bfc4e7fc7396942e75e922d4a31a564d014f0f",
