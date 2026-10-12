@@ -5,7 +5,7 @@ Push-Location $projectRoot
 try {
     $env:PATH = "$projectRoot\tools\llvm-mingw-20261006-ucrt-x86_64\bin;$env:PATH"
     $cmake = "$projectRoot\tools\cmake-4.4.4-windows-x86_64\bin\cmake.exe"
-    if (!(Test-Path tools/rexglue-sdk/CMakeLists.txt)) { throw 'Download the pinned SDK and dependencies described in docs/graphics_next.md first.' }
+    if (!(Test-Path tools/rexglue-sdk/CMakeLists.txt)) { throw 'Download the pinned SDK and dependencies described in docs/building_and_updates.md first.' }
     if ($Windowed) { & $Python scripts/extract_launcher_icon.py; if ($LASTEXITCODE -ne 0) { throw 'GH2 icon extraction failed' } }
     & $Python scripts/apply_rexglue_patches.py
     if ($LASTEXITCODE -ne 0) { throw 'GPU SDK compatibility patch failed' }
