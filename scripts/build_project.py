@@ -159,10 +159,11 @@ def build(args):
         run([python,'scripts/prepare_pc_menu.py'])
     run([python,'scripts/extract_launcher_icon.py'])
     run(['powershell.exe','-NoProfile','-ExecutionPolicy','Bypass','-File','scripts/build_launcher.ps1'])
+    run(['powershell.exe','-NoProfile','-ExecutionPolicy','Bypass','-File','scripts/build_updater.ps1'])
     output=ROOT/'tools/rexglue-sdk/out/win-amd64'
     receipt=dict(schema=1,source_id=source_id(),source_id_algorithm='sha256-path-and-LF-normalized-source',built_at_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),lock_sha256=sha256(ROOT/'dependencies.lock.json'),
                  game=LOCK['game'],dependencies=LOCK['repositories'],artifacts={})
-    for file in (ROOT/'Guitar Hero 2 Launcher.exe',output/'Guitar Hero 2.exe',output/'librexruntime.dll',output/'rexgpu-xenos.dll'):
+    for file in (ROOT/'Guitar Hero 2 Launcher.exe',ROOT/'Guitar Hero 2 Updater.exe',output/'Guitar Hero 2.exe',output/'librexruntime.dll',output/'rexgpu-xenos.dll'):
         if file.exists():receipt['artifacts'][file.relative_to(ROOT).as_posix()]=sha256(file)
     (ROOT/'build/build-receipt.json').write_text(json.dumps(receipt,indent=2))
     print('Build complete. Open Guitar Hero 2 Launcher.exe. Saves and settings in Documents were not modified.')
