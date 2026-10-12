@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 LOCK=json.loads((ROOT/'dependencies.lock.json').read_text())
 SOURCE_DIRS=('runtime','launcher','patches','scripts','tests','config')
 SOURCE_ARTWORK=('launcher/assets/gh2pc-original-logo.png','launcher/assets/gh2pc-original-icon.png','launcher/assets/gh2pc-original.ico')
-SOURCE_FILES=('Build.ps1','Update.ps1','CMakeLists.txt','README.md','Start-GH2.cmd','Start-GH2.ps1','dependencies.lock.json','requirements-build.txt','.gitignore')
+SOURCE_FILES=('Build.ps1','Update.ps1','CMakeLists.txt','README.md','LICENSE','Start-GH2.cmd','Start-GH2.ps1','dependencies.lock.json','requirements-build.txt','.gitignore')
 
 def sha256(file):
     digest=hashlib.sha256()
