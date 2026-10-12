@@ -1,0 +1,14 @@
+*.iso
+/GH2 Launcher.exe
+/Guitar Hero 2 Launcher.exe
+/launcher/assets/gh2.ico
+/launcher/assets/gh2-pc-logo.png
+/launcher/assets/gh2-logo.bmp
+/Guitar Hero 2 Launcher.next.exe
+/Guitar Hero 2 Launcher.review.exe
+/Guitar Hero 2 Launcher.stage.exe
+/private/
+/generated/
+/build/
+/tools/
+__pycache__/
