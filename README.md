@@ -108,3 +108,13 @@ ReXGlue's pinned runtime is now integrated in a separate SDK-context build. It o
 Remaining correctness work includes `setjmp`/`longjmp`, exception handling, indirect targets that arise only at runtime, inherited instruction implementations beyond the tested extension set, and complete vector-status behavior. None of the checks establish song playback or accurate gameplay timing yet.
 
 The ISO, extracted files, decoded image, downloaded tools, and generated game code are excluded from source control and source releases. The earlier diagnostic bootstrap remains available for debugging; its startup-only limitations describe an earlier checkpoint, before the current playable runtime and launcher.
+
+## Release downloads and project information
+
+Releases include a source ZIP, an optional standalone launcher, and SHA256 checksums. GitHub names the launcher download `Guitar.Hero.2.Launcher.exe`; put it in the root of an existing compatible built project. It contains no game and is also produced when building the source.
+
+The source release includes this project's MIT license and original launcher artwork. Original project code uses that license; downloaded dependencies retain their own licenses. Game assets, generated game translations and game binaries are excluded. This is an unofficial community project, not affiliated with or endorsed by the game's rights holders.
+
+The project owner has completed songs and verified career save/reload, controller switching/reconnection, Discord presence and the audience toggle. Performance varies by hardware and scene. Gameplay simulation remains at the original 60 Hz; higher simulation rates and a launcher video-calibration tool remain future work. Video calibration is available in the game's menu. Experimental upscaling options have been removed.
+
+Allow approximately 10 GB free for a build with the ISO stored elsewhere, or 20 GB with the ISO in the project folder. Existing Documents saves and settings are retained by source updates. See [building and updates](docs/building_and_updates.md) for setup and the supported dump hash.

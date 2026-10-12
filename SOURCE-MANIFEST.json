@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "source_id": "ae58590d740250d6cd3729adf171d6094bfa1f62926db8443cfad1135145db6f",
+  "source_id": "1cc5c5d7a13dca1ad06c779178c009a48d5303c1bb88ce539a474cf8216b5956",
   "files": {
     ".gitignore": "57ecf426dd1f19f34d51ce2dc262ecfb9d3b42721a0b68577ed63839ed502c41",
     "Build.ps1": "9747dab0a00df90a6ffc7c63b961f06cc4f3f315b3ee7a61b1420df73120c6f5",
@@ -21,7 +21,7 @@
     "docs/launcher_logo.md": "9821149d7105fe35a668a903e6df781c28ce2600618562d9d41b6915f3d87a0d",
     "docs/native_pc_menu.md": "05f1bc54760a0e1d967881e614d9b08fec3ed2856d969eb4ed21548244927875",
     "docs/performance.md": "81f8ea55e1e2e362bd7487e93d9d95d78d2e3b92abd6de94219b3a21a7908945",
-    "docs/release_0.1.0.md": "d13f6250817c95547d3be1572f034f6a47c0da2b8909ad1cccb95934bfd59c2b",
+    "docs/release_0.1.0.md": "436a134a31e1438b44aeb8c8bfc94630aa5d2ad238e637a57b4567c720fb911b",
     "docs/saving.md": "b66dfec1ebdd271ded38f5b6c8c10dacc0f67cccd3cef4b2991196ddd52f1c1d",
     "docs/translation_changes.md": "ace2cad2b4956e5b102345f825e05eaac6962f9a211c536994597c8b964cc05f",
     "launcher/assets/gh2pc-original-icon.png": "6f16c088ad2af2ec45ef2348c66b4068e75b997d30018d14a0074253d85fb639",
@@ -39,7 +39,7 @@
     "patches/gh2_present_settings.inl": "0442ebb91afbca947d0a152cad05e1da54b1eed55b0d8eec9999224ee5e8fc75",
     "patches/rexglue-headers/DXProgrammableCapture.h": "e6176d3cd12544226a4466fa730f626873dfdd0bb5075f50a1d3a5bc8d6f3501",
     "patches/rexglue-headers/README.md": "6e801395ffee29636ffbf4da89ef2f85b89d0f17734e0fe0e26e1978348952b0",
-    "README.md": "07ee0d51ebd097bbc222fb5d28d4e9e709fd039c36a740c5806280e30579921c",
+    "README.md": "0538e20d321652020cb47b1d2a7e482300151de2ed7102a6656c0afc00062eae",
     "requirements-build.txt": "fee4c4a4373c159ca7cc40df08abed3def56c84e8d33b15ca8505b0773ebc6c9",
     "runtime/audio_calibration_dialog.h": "d3283f957069af18fc30162b8b515f76ac45d633ecf219c20264108e674dc2d9",
     "runtime/audio_delay.h": "6b9581b524308ae97038b34d12bfc4e7fc7396942e75e922d4a31a564d014f0f",
