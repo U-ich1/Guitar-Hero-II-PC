@@ -34,6 +34,9 @@ bool game_running(){
     CloseHandle(snapshot);return found;
 }
 void install_updates(const fs::path& root){
+    HANDLE update_lock=CreateFileW((root/L"build/updater/install.lock").c_str(),GENERIC_READ,FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE,nullptr,OPEN_EXISTING,FILE_ATTRIBUTE_NORMAL,nullptr);
+    if(update_lock==INVALID_HANDLE_VALUE&&GetLastError()==ERROR_SHARING_VIOLATION)throw std::runtime_error("An update is being built. Wait for the updater to finish before playing.");
+    if(update_lock!=INVALID_HANDLE_VALUE)CloseHandle(update_lock);
     if(game_running())throw std::runtime_error("GH2 is already running. Close it normally before launching again.");
     const auto directory=root/L"tools/rexglue-sdk/out/win-amd64";
     if(!fs::exists(directory/L"Guitar Hero 2.exe")&&fs::exists(directory/L"gh2_pc.exe"))fs::rename(directory/L"gh2_pc.exe",directory/L"Guitar Hero 2.exe");
@@ -514,7 +517,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR command,int){
         state.widget(-1,L"BUTTON",L"Back",BS_PUSHBUTTON|WS_TABSTOP,460,750,100,34,112);
         state.widget(-1,L"BUTTON",L"SETTINGS",BS_PUSHBUTTON|WS_TABSTOP,0,0,220,40,111);
         state.widget(-1,L"BUTTON",L"EXIT",BS_PUSHBUTTON|WS_TABSTOP,0,0,220,40,110);
-        state.widget(-1,L"STATIC",L"Version 0.1.0",SS_LEFT,0,0,320,24,113);
+        state.widget(-1,L"STATIC",L"Version 0.1.1",SS_LEFT,0,0,320,24,113);
         state.widget(-1,L"BUTTON",L"Open logs",BS_PUSHBUTTON|WS_TABSTOP,450,750,120,34,105);
         state.play_button=state.widget(-1,L"BUTTON",L"Play Guitar Hero II",BS_DEFPUSHBUTTON|WS_TABSTOP,740,750,230,34,106);
         state.populate();state.ready=true;state.layout();state.show_page();state.refresh_state();SetTimer(window,1,1000,nullptr);
