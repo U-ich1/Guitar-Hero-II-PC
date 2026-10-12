@@ -44,7 +44,7 @@ Close this project's game and launcher normally, then install a source ZIP from 
 
 The updater verifies every file against the archive manifest, restricts writes to project source files, backs up overwritten sources in `build/source-update-backups`, applies the update and rebuilds from the existing dump. Invalid archives are rejected before writing source files; write failures restore changes made by that operation. Dumps, generated data, tools, Documents settings and saves are excluded from source updates.
 
-For a Git checkout, pull the project's source changes and rerun `Build.ps1`. No hosted project repository or release server has been published by these scripts.
+For a Git checkout, pull the project's source changes and rerun `Build.ps1`. The source repository and numbered releases are hosted at https://github.com/U-ich1/Guitar-Hero-II-PC. These scripts do not automatically publish or check for releases.
 
 ```powershell
 git pull --ff-only
